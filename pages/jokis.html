@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joki — BS JOKI</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/jokis.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand" aria-label="BS JOKI Home">
+                <span class="brand-svg" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2L4 8v8c0 5.5 4.5 8.5 10 10 5.5-1.5 10-4.5 10-10V8L14 2z" stroke="#ff3b30" stroke-width="2" fill="rgba(255,59,48,0.1)"/>
+                        <path d="M9 14l3.5 3.5L19 11" stroke="#ff3b30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="brand-text">BS <span class="brand-highlight">JOKI</span></span>
+            </a>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarMenu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="navbar-menu" id="navbarMenu" role="menu">
+                <a href="../index.html" class="nav-link" role="menuitem">Home</a>
+                <a href="services.html" class="nav-link" role="menuitem">Services</a>
+                <a href="jokis.html" class="nav-link active" role="menuitem">Joki</a>
+                <a href="reviews.html" class="nav-link" role="menuitem">Reviews</a>
+                <a href="faq.html" class="nav-link" role="menuitem">FAQ</a>
+                <a href="order.html" class="btn btn-accent navbar-cta" role="menuitem">PESAN JOKI</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- JOKIS PAGE -->
+    <main class="page-main jokis-page">
+        <div class="page-header">
+            <span class="section-label">OUR TEAM</span>
+            <h1 class="page-title">JOKI <span class="title-accent">PROFESIONAL</span></h1>
+            <p class="page-description">Tim joki simulasi dengan spesialisasi berbeda-beda. Semua joki saat ini dalam status COMING SOON.</p>
+        </div>
+
+        <div class="simulation-banner">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="9" cy="9" r="8" stroke="#ffcc00" stroke-width="1.5" fill="none"/>
+                <path d="M9 4v5l3 2" stroke="#ffcc00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>SIMULATION MODE — Semua profil joki adalah simulasi dan belum tersedia untuk pekerjaan nyata.</span>
+        </div>
+
+        <div class="jokis-layout">
+            <!-- FILTER SIDEBAR -->
+            <aside class="filter-sidebar" id="jokiFilterSidebar" aria-label="Joki filters">
+                <div class="filter-group">
+                    <label for="jokiSearchInput" class="filter-label">Search</label>
+                    <input type="text" id="jokiSearchInput" class="filter-input" placeholder="Cari joki..." autocomplete="off" aria-label="Search jokis">
+                </div>
+
+                <div class="filter-group">
+                    <span class="filter-label">Specialization</span>
+                    <div class="filter-options" id="jokiCategoryFilter">
+                        <button class="filter-chip active" data-category="all" aria-pressed="true">All</button>
+                        <button class="filter-chip" data-category="Rank Push" aria-pressed="false">Rank Push</button>
+                        <button class="filter-chip" data-category="Weapon Mastery" aria-pressed="false">Weapon</button>
+                        <button class="filter-chip" data-category="Battle Pass" aria-pressed="false">Battle Pass</button>
+                        <button class="filter-chip" data-category="Mission" aria-pressed="false">Mission</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="jokiSortSelect" class="filter-label">Sort By</label>
+                    <select id="jokiSortSelect" class="filter-select" aria-label="Sort jokis">
+                        <option value="recommended">Recommended</option>
+                        <option value="rating-high">Rating: High to Low</option>
+                        <option value="orders-high">Most Orders</option>
+                        <option value="speed-fast">Fastest Speed</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- JOKI GRID -->
+            <section class="joki-grid-container">
+                <div class="joki-grid" id="jokiGrid">
+                    <!-- Rendered by JS -->
+                </div>
+                <div id="jokiEmptyState" class="empty-state" style="display:none;">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="30" cy="30" r="28" stroke="#2a2a3a" stroke-width="2" fill="none"/>
+                        <circle cx="30" cy="22" r="8" stroke="#2a2a3a" stroke-width="2" fill="none"/>
+                        <path d="M12 50c2-8 10-12 18-12s16 4 18 12" stroke="#2a2a3a" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3 class="empty-state-title">No Jokis Found</h3>
+                    <p class="empty-state-text">Coba ubah pencarian atau reset filter.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="joki-contact-section">
+            <p>Ingin request joki spesifik? Hubungi kami langsung.</p>
+            <div class="joki-contact-actions">
+                <a href="order.html" class="btn btn-accent">LANJUT SIMULASI</a>
+                <a href="mailto:Ridojulian77@gmail.com" class="btn btn-outline">HUBUNGI VIA GMAIL</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <a href="../index.html" class="footer-brand">BS <span>JOKI</span></a>
+                    <p class="footer-tagline">PUSH YOUR LIMITS. WE HANDLE THE GRIND.</p>
+                    <p class="footer-disclaimer">BS JOKI adalah layanan independen dan tidak berafiliasi secara resmi dengan Blood Strike atau NetEase.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <a href="../index.html" class="footer-link">Home</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="jokis.html" class="footer-link">Joki</a>
+                    <a href="reviews.html" class="footer-link">Reviews</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Services</h4>
+                    <a href="push-rank.html" class="footer-link">Push Rank</a>
+                    <a href="weapon-mastery.html" class="footer-link">Weapon Mastery</a>
+                    <a href="battle-pass.html" class="footer-link">Battle Pass</a>
+                    <a href="services.html" class="footer-link">All Services</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <a href="mailto:Ridojulian77@gmail.com" class="footer-link footer-email">Ridojulian77@gmail.com</a>
+                    <a href="tracking.html" class="footer-link">Track Order</a>
+                    <a href="order.html" class="footer-link">Order Now</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BS JOKI. All rights reserved.</p>
+                <p class="footer-sim-label">SIMULATION MODE — Frontend Demo Only</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Modal Container -->
+    <div id="modalContainer" class="modal-container" aria-hidden="true"></div>
+
+    <!-- Scripts -->
+    <script src="../data/jokis.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/jokis.js"></script>
+</body>
+</html>
