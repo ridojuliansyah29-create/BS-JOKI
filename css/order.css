@@ -1,0 +1,103 @@
+/* ============================================
+   BS JOKI - ORDER CSS
+   ============================================ */
+
+.order-page {
+    padding-top: 32px;
+}
+
+.order-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    margin-top: 24px;
+    align-items: start;
+}
+
+.order-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.order-summary {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    position: sticky;
+    top: calc(var(--navbar-height) + 20px);
+}
+
+.order-summary .summary-row {
+    padding: 4px 0;
+    font-size: 0.8rem;
+}
+
+/* Modal success content */
+.order-success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(52, 199, 89, 0.1);
+    border: 2px solid var(--success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 2rem;
+}
+
+.order-success-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.order-success-id {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 12px 0;
+}
+
+.order-success-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .order-layout {
+        grid-template-columns: 1fr 280px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        position: static;
+        margin-top: 16px;
+    }
+
+    .order-form {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-form {
+        padding: 12px;
+    }
+}

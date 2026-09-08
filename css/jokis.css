@@ -1,0 +1,280 @@
+/* ============================================
+   BS JOKI - JOKIS CSS
+   ============================================ */
+
+.jokis-page {
+    padding-top: 32px;
+}
+
+.jokis-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.joki-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.joki-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.joki-card:hover {
+    border-color: var(--accent);
+    background: var(--card-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.joki-card-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.joki-card-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.joki-card-rating {
+    font-size: 0.8rem;
+    color: var(--warning);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+
+.joki-card-orders {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.joki-card-spec {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+}
+
+.joki-card-speed {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+.joki-card-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: rgba(255, 204, 0, 0.12);
+    color: var(--warning);
+    text-transform: uppercase;
+}
+
+.joki-contact-section {
+    text-align: center;
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.joki-contact-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.joki-contact-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* JOKI DETAIL */
+.joki-detail-page {
+    padding-top: 32px;
+}
+
+.joki-detail-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.joki-detail-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 auto 16px;
+}
+
+.joki-detail-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.joki-detail-rating {
+    font-size: 0.9rem;
+    color: var(--warning);
+    margin-bottom: 4px;
+}
+
+.joki-detail-orders {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.joki-detail-spec {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+    background: rgba(255, 59, 48, 0.1);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: 8px;
+}
+
+.joki-detail-speed {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.joki-detail-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.joki-detail-status {
+    display: inline-block;
+    margin: 12px 0 20px;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    background: rgba(255, 204, 0, 0.12);
+    color: var(--warning);
+    text-transform: uppercase;
+}
+
+.joki-detail-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.joki-detail-reviews {
+    text-align: left;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.joki-detail-reviews h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.joki-detail-review-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.joki-detail-review-item:last-child {
+    border-bottom: none;
+}
+
+.joki-detail-review-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.joki-detail-review-comment {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .jokis-layout {
+        grid-template-columns: 220px 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .jokis-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .joki-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .joki-detail-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .joki-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .joki-detail-actions {
+        flex-direction: column;
+    }
+}

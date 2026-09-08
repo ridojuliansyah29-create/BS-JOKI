@@ -1,0 +1,120 @@
+/* ============================================
+   BS JOKI - FOOTER CSS
+   ============================================ */
+
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 40px 0 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-brand-col {
+    max-width: 320px;
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.footer-brand span {
+    color: var(--accent);
+}
+
+.footer-tagline {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.footer-disclaimer {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.footer-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.footer-link {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 4px 0;
+    transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+    color: var(--accent);
+}
+
+.footer-email {
+    word-break: break-all;
+}
+
+.footer-bottom {
+    padding: 16px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.footer-sim-label {
+    font-size: 0.7rem;
+    color: var(--warning);
+    letter-spacing: 0.5px;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .footer-brand-col {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

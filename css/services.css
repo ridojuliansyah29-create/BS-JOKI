@@ -1,0 +1,409 @@
+/* ============================================
+   BS JOKI - SERVICES CSS
+   ============================================ */
+
+.services-page {
+    padding-top: 32px;
+}
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.services-grid-container {
+    min-height: 400px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.service-card-full {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-card-full:hover {
+    border-color: var(--accent);
+    background: var(--card-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.service-card-icon-svg {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background: rgba(255, 59, 48, 0.08);
+    flex-shrink: 0;
+}
+
+.service-card-badges {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.service-card-title-full {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.service-card-desc-full {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.service-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}
+
+.service-card-price-full {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.service-card-duration-full {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* Config page */
+.config-page {
+    padding-top: 32px;
+}
+
+.config-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.config-form-card,
+.config-summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.config-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Summary rows */
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.summary-row span:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-align: right;
+}
+
+.summary-divider {
+    border-top: 1px solid var(--border);
+    margin: 12px 0;
+}
+
+.summary-total span {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: var(--accent) !important;
+}
+
+.summary-note {
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(255, 204, 0, 0.05);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.summary-note p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* FAQ */
+.faq-page {
+    padding-top: 32px;
+}
+
+.faq-container {
+    max-width: 700px;
+    margin: 24px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+}
+
+.faq-item:hover {
+    border-color: var(--border-light);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background var(--transition-fast);
+}
+
+.faq-question:hover {
+    background: var(--surface-hover);
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.faq-chevron {
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+    color: var(--text-secondary);
+}
+
+.faq-item[aria-expanded="true"] .faq-chevron,
+.faq-question[aria-expanded="true"] .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 18px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 16px;
+    margin: 0;
+}
+
+.faq-contact-bottom {
+    text-align: center;
+    margin-top: 32px;
+    padding: 20px;
+}
+
+.faq-contact-bottom p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+/* Reviews */
+.reviews-page {
+    padding-top: 32px;
+}
+
+.reviews-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    transition: all var(--transition-base);
+}
+
+.review-card:hover {
+    border-color: var(--border-light);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-avatar-sm {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.review-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.review-date {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.review-rating {
+    display: flex;
+    gap: 2px;
+    color: var(--warning);
+    font-size: 0.8rem;
+}
+
+.review-service {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.review-comment {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.review-sim-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    color: var(--warning);
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.btn-load-more {
+    margin-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services-layout,
+    .reviews-layout {
+        grid-template-columns: 220px 1fr;
+        gap: 16px;
+    }
+
+    .config-layout {
+        grid-template-columns: 1fr 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-layout,
+    .reviews-layout,
+    .config-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-sidebar {
+        position: static;
+        margin-bottom: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .config-form-card,
+    .config-summary-card {
+        padding: 16px;
+    }
+}

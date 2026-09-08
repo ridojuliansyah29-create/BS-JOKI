@@ -1,0 +1,335 @@
+/* ============================================
+   BS JOKI - RESPONSIVE CSS
+   All breakpoints for responsive behavior
+   ============================================ */
+
+/* Large desktop */
+@media (max-width: 1440px) {
+    :root {
+        --container-width: 1100px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1280px) {
+    :root {
+        --container-width: 1000px;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px 60px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .trust-item {
+        font-size: 0.7rem;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .section-title,
+    .page-title {
+        font-size: 1.6rem;
+    }
+
+    .section-description,
+    .page-description {
+        font-size: 0.85rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand-col {
+        grid-column: 1 / -1;
+    }
+
+    .cta-title {
+        font-size: 1.6rem;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+
+    /* Form elements */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Filter sidebar stacks */
+    .filter-sidebar {
+        position: static;
+        margin-bottom: 16px;
+    }
+
+    /* Grid layouts */
+    .services-grid,
+    .joki-grid,
+    .joki-preview-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Mobile large */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .section-title,
+    .page-title {
+        font-size: 1.4rem;
+    }
+
+    .services-grid,
+    .joki-grid,
+    .joki-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .config-form-card,
+    .config-summary-card,
+    .order-form,
+    .order-summary {
+        padding: 16px;
+    }
+
+    .summary-row {
+        font-size: 0.78rem;
+    }
+
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .toast-container {
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .toast {
+        max-width: 100%;
+    }
+
+    .modal-content {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile small */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-badge {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+    }
+
+    .section-title,
+    .page-title {
+        font-size: 1.3rem;
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+    }
+
+    .filter-options {
+        gap: 4px;
+    }
+
+    .filter-chip {
+        padding: 4px 10px;
+        font-size: 0.7rem;
+    }
+
+    .review-card {
+        padding: 14px;
+    }
+
+    .joki-card,
+    .service-card,
+    .service-card-full {
+        padding: 16px;
+    }
+
+    .joki-card-avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+    }
+
+    .config-title {
+        font-size: 1rem;
+    }
+
+    .summary-total span {
+        font-size: 0.95rem !important;
+    }
+
+    .tracking-search-box {
+        flex-direction: column;
+    }
+
+    .tracking-input {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .tracking-result {
+        padding: 16px;
+    }
+
+    .timeline-content {
+        font-size: 0.7rem;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        font-size: 0.5rem;
+    }
+}
+
+/* Mobile extra small */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .hero-description {
+        font-size: 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .btn-lg {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .section-title,
+    .page-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ultra wide */
+@media (min-width: 1920px) {
+    :root {
+        --container-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
